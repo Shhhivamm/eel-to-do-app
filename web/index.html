@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+
+    <link rel="stylesheet" href="bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="container-fluid px-4 py-4" id="main-container">
+        <div class="todo-container">
+            <h1 class="app-title">Task Manager</h1>
+            <hr>
+            <div class="input-group">
+                <div class="row g-3 align-items-end">
+                    <div class="col-md-5">
+                        <label for="todo-title-input" class="form-label">Task Title</label>
+                        <input type="text" class="form-control" id="todo-title-input" minlength="5" maxlength="50" placeholder="Enter your task...">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="todo-timer-input" class="form-label">Timer</label>
+                        <input type="text" class="form-control" id="todo-timer-input" placeholder="hrs:min (e.g., 1:30)" pattern="^([0-9]+):([0-5][0-9])$">
+                    </div>
+                    <div class="col-md-3">
+                        <button type="submit" class="btn btn-primary w-100" id="todo-add-btn">
+                            <i class="fas fa-plus"></i> Add Task
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                            <th>Timer</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="todo-table-body">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="/eel.js"></script>
+    <script src="jquery/jquery.js"></script>
+    <script src="bootstrap/bootstrap.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
